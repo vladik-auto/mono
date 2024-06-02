@@ -1,0 +1,109 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & .mainInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+
+    & .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 275px;
+      height: 275px;
+      background-color: var(--bg-dark);
+      border-radius: 50%;
+      position: relative; /* Добавляем позиционирование */
+      overflow: hidden; /* Скрываем содержимое, которое выходит за пределы блока */
+      transition: background-color 0.3s ease; /* Добавляем анимацию перехода цвета */
+
+      &:hover {
+        background-color: darken(#888, 15%); /* Изменяем цвет при наведении */
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+
+      & .avatarFile {
+        position: absolute; /* Размещаем элемент поверх родительского */
+        width: 100%; /* Занимает всю ширину родительского элемента */
+        height: 100%; /* Занимает всю высоту родительского элемента */
+        opacity: 0; /* Скрываем элемент */
+        cursor: pointer; /* Устанавливаем курсор указывающий на возможность выбора файла */
+      }
+    }
+
+    & .info {
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+      flex: 1 1 70%;
+    }
+  }
+
+
+
+  & .additionalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  & .sex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    & .radioWrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+
+    }
+  }
+
+  & .passwords {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  & .button {
+    color: var(--white);
+    font: var(--paragraph-2);
+
+  }
+}
+.errorInput {
+  border: 1px solid var(--error);
+
+  & + p {
+    color: var(--error);
+
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  bottom: -30px;
+  color: var(--error);
+  left: 10px;
+}

@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .select {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .tabs {
+    border-radius: var(--border-radius-5);
+    padding: 5px;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+  }
+}

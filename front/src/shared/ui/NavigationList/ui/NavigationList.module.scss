@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg);
+  width: 100%;
+
+
+  &.hide {
+    display: none;
+  }
+
+  &Item {
+    display: flex;
+    justify-content: center;
+
+    & a {
+      background-color: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 16px 24px;
+      width: 100%;
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--bg-dark);
+      }
+
+      &:active {
+        background-color: var(--bg-dark);
+      }
+    }
+  }
+}
