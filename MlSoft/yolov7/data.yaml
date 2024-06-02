@@ -1,0 +1,4 @@
+train: /home/robot/yolov7/dataset/images/train
+val: /home/robot/yolov7/dataset/images/val
+nc: 2  # Number of classes
+names: ['train', 'trainbad']
